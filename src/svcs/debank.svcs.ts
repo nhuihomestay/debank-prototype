@@ -16,6 +16,24 @@ class DebankSvcs {
         return getData
 
     }
+
+    public async postRepost(header: any, body: any): Promise<any> {
+        const request = {
+            headers: header,
+            body: body
+        }
+        console.log(request)
+        const postData = await axios.post(`https://api.debank.com/article/repost`, request)
+            .then(resp => {
+                return resp.data
+            })
+            .catch(err => {
+                return err.data
+            })
+
+        return postData
+
+    }
 }
 
 export default DebankSvcs

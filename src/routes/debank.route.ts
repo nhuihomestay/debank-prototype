@@ -8,4 +8,10 @@ router.get('/', async (req: Request, res: Response) => {
     res.json(result)
 })
 
+router.post('/repost', async (req: Request, res: Response) => {
+    const deBankCtr = new DebankCtr()
+    const result = await deBankCtr.repostDebank(req)
+    res.json(result)
+})
+
 export default router
