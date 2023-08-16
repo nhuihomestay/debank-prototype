@@ -1,0 +1,19 @@
+{
+    "account": [{
+            "random_at": 1686945307,
+            "random_id": "6496ee24d0d44e61b4be31868a694e58",
+            "session_id": "38700ebae3f94b3d9a3a85a709a3f4fe",
+            "user_addr": "0xd4562d7d62cefebada19449a0ebd4a8d2afd0976",
+            "wallet_type": "metamask",
+            "is_verified": true
+        },
+        {
+            "random_at": 1689314635,
+            "random_id": "92d0a85ef822460082629eefecca189d",
+            "session_id": "03557a8ad39c4ae2b4efaab96cdd775c",
+            "user_addr": "0x2d66e720def5e295109bd7a0c5ed079361f70604",
+            "wallet_type": "metamask",
+            "is_verified": true
+        }
+    ]
+}
