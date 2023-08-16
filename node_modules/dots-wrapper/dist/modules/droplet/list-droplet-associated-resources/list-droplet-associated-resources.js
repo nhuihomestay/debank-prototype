@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.listDropletAssociatedResources = void 0;
+const listDropletAssociatedResources = ({ httpClient, }) => ({ droplet_id, }) => {
+    const path = '/droplets';
+    const url = `${path}/${droplet_id}/destroy_with_associated_resources`;
+    return httpClient.get(url);
+};
+exports.listDropletAssociatedResources = listDropletAssociatedResources;
+//# sourceMappingURL=list-droplet-associated-resources.js.map

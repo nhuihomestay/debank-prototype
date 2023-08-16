@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getDroplet = void 0;
+const getDroplet = ({ httpClient, }) => ({ droplet_id, }) => {
+    const path = '/droplets';
+    const url = `${path}/${droplet_id}`;
+    return httpClient.get(url);
+};
+exports.getDroplet = getDroplet;
+//# sourceMappingURL=get-droplet.js.map

@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteSnapshot = void 0;
+const deleteSnapshot = ({ httpClient, }) => ({ snapshot_id, }) => {
+    const path = '/snapshots';
+    const url = `${path}/${snapshot_id}`;
+    return httpClient.delete(url);
+};
+exports.deleteSnapshot = deleteSnapshot;
+//# sourceMappingURL=delete-snapshot.js.map

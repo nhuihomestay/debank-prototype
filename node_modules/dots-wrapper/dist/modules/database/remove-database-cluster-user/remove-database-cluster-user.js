@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.removeDatabaseClusterUser = void 0;
+const removeDatabaseClusterUser = ({ httpClient, }) => ({ database_cluster_id, user_name, }) => {
+    const path = '/databases';
+    const url = `${path}/${database_cluster_id}/users/${user_name}`;
+    return httpClient.delete(url);
+};
+exports.removeDatabaseClusterUser = removeDatabaseClusterUser;
+//# sourceMappingURL=remove-database-cluster-user.js.map

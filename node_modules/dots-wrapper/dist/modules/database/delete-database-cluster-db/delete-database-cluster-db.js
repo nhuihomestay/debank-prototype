@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteDatabaseClusterDb = void 0;
+const deleteDatabaseClusterDb = ({ httpClient, }) => ({ database_cluster_id, db_name, }) => {
+    const path = '/databases';
+    const url = `${path}/${database_cluster_id}/dbs/${db_name}`;
+    return httpClient.delete(url);
+};
+exports.deleteDatabaseClusterDb = deleteDatabaseClusterDb;
+//# sourceMappingURL=delete-database-cluster-db.js.map

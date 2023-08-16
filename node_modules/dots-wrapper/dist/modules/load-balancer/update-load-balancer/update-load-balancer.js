@@ -1,0 +1,23 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.updateLoadBalancer = void 0;
+const updateLoadBalancer = ({ httpClient, }) => ({ algorithm, droplet_ids, enable_proxy_protocol, forwarding_rules, health_check, load_balancer_id, name, redirect_http_to_https, region, sticky_sessions, tag, vpc_uuid, }) => {
+    const path = '/load_balancers';
+    const body = {
+        algorithm,
+        droplet_ids,
+        enable_proxy_protocol,
+        forwarding_rules,
+        health_check,
+        name,
+        redirect_http_to_https,
+        region,
+        sticky_sessions,
+        tag,
+        vpc_uuid,
+    };
+    const url = `${path}/${load_balancer_id}`;
+    return httpClient.put(url, body);
+};
+exports.updateLoadBalancer = updateLoadBalancer;
+//# sourceMappingURL=update-load-balancer.js.map

@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.updateImage = void 0;
+const updateImage = ({ httpClient, }) => ({ description, distribution, image_id, name, }) => {
+    const path = '/images';
+    const url = `${path}/${image_id}`;
+    const body = { description, distribution, name };
+    return httpClient.post(url, body);
+};
+exports.updateImage = updateImage;
+//# sourceMappingURL=update-image.js.map

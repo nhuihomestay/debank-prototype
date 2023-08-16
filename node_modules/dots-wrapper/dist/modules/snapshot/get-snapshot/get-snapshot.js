@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getSnapshot = void 0;
+const getSnapshot = ({ httpClient, }) => ({ snapshot_id, }) => {
+    const path = '/snapshots';
+    const url = `${path}/${snapshot_id}`;
+    return httpClient.get(url);
+};
+exports.getSnapshot = getSnapshot;
+//# sourceMappingURL=get-snapshot.js.map

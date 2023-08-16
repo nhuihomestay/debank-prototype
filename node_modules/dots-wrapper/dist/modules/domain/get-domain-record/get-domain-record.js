@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getDomainRecord = void 0;
+const getDomainRecord = ({ httpClient, }) => ({ domain_name, domain_record_id, }) => {
+    const path = '/domains';
+    const url = `${path}/${domain_name}/records/${domain_record_id}`;
+    return httpClient.get(url);
+};
+exports.getDomainRecord = getDomainRecord;
+//# sourceMappingURL=get-domain-record.js.map

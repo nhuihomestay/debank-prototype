@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteVpc = void 0;
+const deleteVpc = ({ httpClient, }) => ({ vpc_id, }) => {
+    const path = '/vpcs';
+    const url = `${path}/${vpc_id}`;
+    return httpClient.delete(url);
+};
+exports.deleteVpc = deleteVpc;
+//# sourceMappingURL=delete-vpc.js.map

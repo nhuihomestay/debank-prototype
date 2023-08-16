@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.listProjects = void 0;
+const listProjects = ({ httpClient, }) => ({ page = 1, per_page = 25, }) => {
+    const path = '/projects';
+    const query_params = { page, per_page };
+    const url = `${path}`;
+    return httpClient.get(url, { params: query_params });
+};
+exports.listProjects = listProjects;
+//# sourceMappingURL=list-projects.js.map

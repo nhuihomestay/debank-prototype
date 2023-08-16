@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.retryDropletDestroy = void 0;
+const retryDropletDestroy = ({ httpClient, }) => ({ droplet_id, }) => {
+    const path = '/droplets';
+    const url = `${path}/${droplet_id}/destroy_with_associated_resources/retry`;
+    return httpClient.post(url);
+};
+exports.retryDropletDestroy = retryDropletDestroy;
+//# sourceMappingURL=retry-droplet-destroy.js.map

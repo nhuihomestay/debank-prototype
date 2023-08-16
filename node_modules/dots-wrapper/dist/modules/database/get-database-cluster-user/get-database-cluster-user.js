@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getDatabaseClusterUser = void 0;
+const getDatabaseClusterUser = ({ httpClient, }) => ({ database_cluster_id, user_name, }) => {
+    const path = '/databases';
+    const url = `${path}/${database_cluster_id}/users/${user_name}`;
+    return httpClient.get(url);
+};
+exports.getDatabaseClusterUser = getDatabaseClusterUser;
+//# sourceMappingURL=get-database-cluster-user.js.map

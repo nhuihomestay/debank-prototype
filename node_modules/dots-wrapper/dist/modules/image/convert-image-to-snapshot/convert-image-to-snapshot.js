@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.convertImageToSnapshot = void 0;
+const convertImageToSnapshot = ({ httpClient, }) => ({ image_id, }) => {
+    const path = '/images';
+    const url = `${path}/${image_id}/actions`;
+    const body = { type: 'convert' };
+    return httpClient.post(url, body);
+};
+exports.convertImageToSnapshot = convertImageToSnapshot;
+//# sourceMappingURL=convert-image-to-snapshot.js.map

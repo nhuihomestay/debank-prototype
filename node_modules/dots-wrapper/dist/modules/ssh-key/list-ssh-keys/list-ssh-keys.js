@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.listSshKeys = void 0;
+const listSshKeys = ({ httpClient, }) => ({ page = 1, per_page = 25, }) => {
+    const path = '/account/keys';
+    const query_params = { page, per_page };
+    const url = `${path}`;
+    return httpClient.get(url, { params: query_params });
+};
+exports.listSshKeys = listSshKeys;
+//# sourceMappingURL=list-ssh-keys.js.map

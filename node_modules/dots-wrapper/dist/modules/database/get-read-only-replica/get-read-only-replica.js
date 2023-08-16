@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getReadOnlyReplica = void 0;
+const getReadOnlyReplica = ({ httpClient, }) => ({ database_cluster_id, read_only_replica_name, }) => {
+    const path = '/databases';
+    const url = `${path}/${database_cluster_id}/replicas/${read_only_replica_name}`;
+    return httpClient.get(url);
+};
+exports.getReadOnlyReplica = getReadOnlyReplica;
+//# sourceMappingURL=get-read-only-replica.js.map

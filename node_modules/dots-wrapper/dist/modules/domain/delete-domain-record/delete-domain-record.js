@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteDomainRecord = void 0;
+const deleteDomainRecord = ({ httpClient, }) => ({ domain_name, domain_record_id, }) => {
+    const path = '/domains';
+    const url = `${path}/${domain_name}/records/${domain_record_id}`;
+    return httpClient.delete(url);
+};
+exports.deleteDomainRecord = deleteDomainRecord;
+//# sourceMappingURL=delete-domain-record.js.map

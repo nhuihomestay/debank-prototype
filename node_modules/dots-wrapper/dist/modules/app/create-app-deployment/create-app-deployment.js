@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createAppDeployment = void 0;
+const createAppDeployment = ({ httpClient, }) => ({ app_id, force_build, }) => {
+    const path = '/apps';
+    const url = `${path}/${app_id}/deployments`;
+    const body = { force_build };
+    return httpClient.post(url, body);
+};
+exports.createAppDeployment = createAppDeployment;
+//# sourceMappingURL=create-app-deployment.js.map

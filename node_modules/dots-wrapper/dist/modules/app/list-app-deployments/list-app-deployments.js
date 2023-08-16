@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.listAppDeployments = void 0;
+const listAppDeployments = ({ httpClient, }) => ({ app_id, page = 1, per_page = 25, }) => {
+    const path = '/apps';
+    const params = { page, per_page };
+    const url = `${path}/${app_id}/deployments`;
+    return httpClient.get(url, { params });
+};
+exports.listAppDeployments = listAppDeployments;
+//# sourceMappingURL=list-app-deployments.js.map

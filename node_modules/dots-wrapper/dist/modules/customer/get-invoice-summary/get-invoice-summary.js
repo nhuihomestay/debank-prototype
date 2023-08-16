@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getInvoiceSummary = void 0;
+const getInvoiceSummary = ({ httpClient, }) => ({ invoice_uuid, }) => {
+    const path = '/customers/my/invoices';
+    const url = `${path}/${invoice_uuid}/summary`;
+    return httpClient.get(url);
+};
+exports.getInvoiceSummary = getInvoiceSummary;
+//# sourceMappingURL=get-invoice-summary.js.map

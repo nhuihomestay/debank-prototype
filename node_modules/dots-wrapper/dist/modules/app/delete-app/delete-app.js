@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteApp = void 0;
+const deleteApp = ({ httpClient, }) => ({ app_id, }) => {
+    const path = '/apps';
+    const url = `${path}/${app_id}`;
+    return httpClient.delete(url);
+};
+exports.deleteApp = deleteApp;
+//# sourceMappingURL=delete-app.js.map

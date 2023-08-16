@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createCdnEndpoint = void 0;
+const createCdnEndpoint = ({ httpClient, }) => ({ origin, ttl, certificate_id, custom_domain, }) => {
+    const path = '/cdn/endpoints';
+    const body = {
+        origin,
+        ttl,
+        certificate_id,
+        custom_domain,
+    };
+    const url = `${path}`;
+    return httpClient.post(url, body);
+};
+exports.createCdnEndpoint = createCdnEndpoint;
+//# sourceMappingURL=create-cdn-endpoint.js.map

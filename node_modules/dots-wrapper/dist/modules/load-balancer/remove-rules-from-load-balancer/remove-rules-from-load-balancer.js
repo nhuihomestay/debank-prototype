@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.removeRulesFromLoadBalancer = void 0;
+const removeRulesFromLoadBalancer = ({ httpClient, }) => ({ forwarding_rules, load_balancer_id, }) => {
+    const path = '/load_balancers';
+    const body = { forwarding_rules };
+    const url = `${path}/${load_balancer_id}/forwarding_rules`;
+    return httpClient.delete(url, { data: body });
+};
+exports.removeRulesFromLoadBalancer = removeRulesFromLoadBalancer;
+//# sourceMappingURL=remove-rules-from-load-balancer.js.map

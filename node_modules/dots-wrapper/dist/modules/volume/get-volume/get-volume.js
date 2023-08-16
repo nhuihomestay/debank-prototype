@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getVolume = void 0;
+const getVolume = ({ httpClient, }) => ({ volume_id, }) => {
+    const path = '/volumes';
+    const url = `${path}/${volume_id}`;
+    return httpClient.get(url);
+};
+exports.getVolume = getVolume;
+//# sourceMappingURL=get-volume.js.map

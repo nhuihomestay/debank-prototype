@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getFloatingIpAction = void 0;
+const getFloatingIpAction = ({ httpClient, }) => ({ action_id, ip, }) => {
+    const path = '/floating_ips';
+    const url = `${path}/${ip}/actions/${action_id}`;
+    return httpClient.get(url);
+};
+exports.getFloatingIpAction = getFloatingIpAction;
+//# sourceMappingURL=get-floating-ip-action.js.map

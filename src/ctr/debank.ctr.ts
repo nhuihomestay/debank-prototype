@@ -25,6 +25,16 @@ class DebankCtr {
             devMessage: "Success"
         }
     }
+
+    public async repostDebank(req: any): Promise<any> {
+        const debankService = new DebankSvcs()
+        const postData = await debankService.postRepost(req, req)
+        console.log("postData ==> ", postData)
+        return {
+            data: postData,
+            devMessage: "Success"
+        }
+    }
 }
 
 export default DebankCtr

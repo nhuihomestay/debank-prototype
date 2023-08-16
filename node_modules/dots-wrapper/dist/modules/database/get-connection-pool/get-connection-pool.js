@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getConnectionPool = void 0;
+const getConnectionPool = ({ httpClient, }) => ({ database_cluster_id, pool_name, }) => {
+    const path = '/databases';
+    const url = `${path}/${database_cluster_id}/pools/${pool_name}`;
+    return httpClient.get(url);
+};
+exports.getConnectionPool = getConnectionPool;
+//# sourceMappingURL=get-connection-pool.js.map
