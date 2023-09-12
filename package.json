@@ -22,7 +22,7 @@
         "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",
         "crypto": "1.0.1",
-        "crypto-js": "4.0.0",
+        "crypto-js": "^4.0.0",
         "currency.js": "2.0.4",
         "dotenv": "8.2.0",
         "dots-wrapper": "3.6.1",

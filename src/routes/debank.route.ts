@@ -14,4 +14,10 @@ router.post('/repost', async (req: Request, res: Response) => {
     res.json(result)
 })
 
+router.get('/getImg', async (req: Request, res: Response) => {
+    const deBankCtr = new DebankCtr()
+    const result = await deBankCtr.movieDb(req)
+    res.json(result)
+})
+
 export default router
